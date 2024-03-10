@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    width: 100%; /* Changed width value to 100% */
+    height: 100vh;
+    background: #A94438;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+	background-color: #A94438;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: #D24545;
+    height: 80px;
+    opacity: 80%;
+}
+
+label.logo {
+    color: #E6BAA3;
+    font-size: 2rem;
+    padding: 0 80px;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E6BAA3;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 6px 5px;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+
+.span {
+    color: #E6BAA3;
+}
+
+nav ul li a:hover {
+    color: #D24545;
+}
+
+.detel {
+    margin-left: 6%;
+    margin-top: 14%;
+    text-align: justify; /* Added text-align property here */
+    color: #E4DEBE; /* Moved color property here from .detel p */
+}
+
+.detel h1 {
+    font-size: 30px; /* Changed font size for consistency */
+    color: #E4DEBE;
+    margin-bottom: 20px;
+}
+
+.detel p {
+    line-height: 22px;
+}
+
+.detel a {
+    background: #E6BAA3;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #D24545;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+a.active, a:hover {
+    background: #E4DEBE;
+    transition: 0.5s;
+}
+
+.images {
+    width: 15%;
+    height: 80%;
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .bg_shapes {
+    bottom: 5%;
+}
+
+.images:hover .iskaa {
+    left: 30%;
+}
+
+.hamburger {
+	position: fixed;
+    top: 20px;
+    right: 20px;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #E4DEBE;
+	margin: 6px 0px;
+	transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: #A94438;
+	padding-top: 120px;
+	transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+	background-color: #A94438;
+	color: #E4DEBE;
+	text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-nav a:hover {
+	background-color: #D24545;
+}
+
+@media (min-width: 768px) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+}
+
+@media(max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
+}

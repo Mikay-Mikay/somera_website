@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+	background-color: #A94438;
+}
+
+.about {
+    position: relative;
+    width: 120%;
+    height: 130vh;
+    background-color: #A94438;
+}
+
+.about img {
+    height: auto;
+    position: absolute;
+    max-width: 100%;
+    right: 10px;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, right 1s;
+}
+
+.about:hover .bg_shapes2 {
+    bottom: 5%;
+}
+
+.about:hover .mikay {
+    right: 5%;
+}
+
+.about .bg_shapes2 {
+    margin-right: 279px;
+    margin-bottom: 190px;
+}
+
+.about .mikay {
+    margin-right: 335px;
+    margin-bottom: 190px;
+}
+
+
+.about-text {
+    max-width: 550px;
+    margin-left: 570px;
+}
+
+.main {
+    max-width: 1130px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h1,
+.about-text h5,
+.about-text p {
+    color: #E4DEBE;
+}
+
+span {
+    color: #E6BAA3;
+}
+
+.about-text h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.about-text h5 {
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    margin-bottom: 45px;
+}
+
+a.button {
+    background: #D24545;
+    color: #E6BAA3;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+a.button:hover {
+    background: transparent;
+    border: 2px solid #D24545;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    width: 150%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: #D24545;
+    height: 80px;
+    opacity: 80%;
+}
+
+label.logo {
+    color: #E6BAA3;
+    font-size: 2rem;
+    padding: 0 80px;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E6BAA3;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 6px 5px;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+
+.span {
+    color: #E6BAA3;
+}
+
+nav ul li a:hover {
+    color: #D24545;
+}
+
+.detel {
+    margin-left: 6%;
+    margin-top: 12%;
+    text-align: justify; /* Added text-align property here */
+    color: #E4DEBE; /* Moved color property here from .detel p */
+}
+
+.detel h1 {
+    font-size: 30px; /* Changed font size for consistency */
+    color: #E4DEBE;
+    margin-bottom: 20px;
+}
+
+.detel p {
+    line-height: 22px;
+}
+
+.detel a {
+    background: #E6BAA3;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #D24545;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+a.active, a:hover {
+    background: #E4DEBE;
+    transition: 0.5s;
+}
+
+.hamburger {
+	position: fixed;
+    top: 20px;
+    right: 20px;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #E4DEBE;
+	margin: 6px 0px;
+	transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: #A94438;
+	padding-top: 120px;
+	transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+	background-color: #A94438;
+	color: #E4DEBE;
+	text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-nav a:hover {
+	background-color: #D24545;
+}
+
+@media (min-width: 768px) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+}
+
+@media(max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
+}
